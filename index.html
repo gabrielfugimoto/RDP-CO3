@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Registro de Movimentacoes</title>
+<title>Registro de Movimentações</title>
 <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
 <script src="https://accounts.google.com/gsi/client" async defer></script>
 <style>
@@ -282,15 +282,15 @@
 <body>
 
 <header>
-  <h1>Registro de Movimentacoes</h1>
-  <p>Selecione o HUB para carregar os analistas</p>
+  <h1>Registro de Movimentações</h1>
+  <p>Entre em sua conta para começar a registrar</p>
 </header>
 
 <main>
 
   <div class="card card-login" id="areaLogin">
     <p class="card-titulo" style="margin-bottom: 4px;">Acesso restrito</p>
-    <p>Autorize com sua conta @shopee.com para registrar movimentacoes.</p>
+    <p>Autorize com sua conta @shopee.com para registrar movimentações.</p>
     <button class="btn btn-login" onclick="autorizar()">Autorizar com o Google</button>
   </div>
 
@@ -302,7 +302,7 @@
     </div>
 
     <div class="card">
-      <p class="card-titulo">1. Dados da mesa</p>
+      <p class="card-titulo">1. Dados</p>
 
       <label for="hub">HUB</label>
       <select id="hub" onchange="aoTrocarHub()">
@@ -338,7 +338,7 @@
     <div class="card">
       <p class="card-titulo">2. Escaneie os pacotes</p>
 
-      <button class="btn btn-scan" id="btnScan" onclick="alternarScanner()">Ligar Camera</button>
+      <button class="btn btn-scan" id="btnScan" onclick="alternarScanner()">Ligar Câmera</button>
       <div id="reader"></div>
 
       <div class="linha-manual" style="margin-top: 12px;">
@@ -349,15 +349,15 @@
 
     <div class="card">
       <p class="card-titulo">
-        3. Codigos da lista
+        3. BRs Escaneados
         <span class="contador" id="contador">0</span>
       </p>
 
-      <div id="listaVazia" class="lista-vazia">Nenhum codigo escaneado ainda</div>
+      <div id="listaVazia" class="lista-vazia">Nenhum código escaneado ainda</div>
       <ul class="lista-codigos" id="listaCodigos"></ul>
     </div>
 
-    <button class="btn btn-submit" id="btnSubmit" onclick="enviarRegistro()">Registrar Movimentacoes</button>
+    <button class="btn btn-submit" id="btnSubmit" onclick="enviarRegistro()">Registrar Movimentacões</button>
 
     <div class="status-msg" id="statusMsg"></div>
 
@@ -365,7 +365,7 @@
 
 </main>
 
-<div class="rodape">Shopee Xpress - Fleet CO3</div>
+<div class="rodape">SHOPEE XPRESS - Fleet CO3</div>
 
 <script>
   // ======= CONFIGURACAO =======
