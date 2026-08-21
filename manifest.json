@@ -1,6 +1,6 @@
 {
   "name": "Registro de Movimentacoes - Fleet CO3",
-  "short_name": "Reg. LMS",
+  "short_name": "RDP CO3",
   "description": "Registro de movimentacoes de pacotes por QR Code",
   "start_url": "./index.html",
   "scope": "./",
