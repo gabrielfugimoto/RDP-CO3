@@ -4,6 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Registro de Movimentações</title>
+
+<!-- PWA: manifesto e icones -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1C2B39">
+<link rel="icon" href="icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Reg. LMS">
+
 <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
 <script src="https://accounts.google.com/gsi/client" async defer></script>
 <style>
@@ -705,6 +715,15 @@
   }
 
   atualizarLista();
+
+  // Registra o service worker para permitir "Instalar app" / "Adicionar a tela inicial"
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('service-worker.js').catch(function () {
+        // Falha silenciosa: o site continua funcionando normalmente sem o PWA
+      });
+    });
+  }
 </script>
 
 </body>
